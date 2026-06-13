@@ -1,5 +1,7 @@
 # Clawd Mochi — Companion Edition 🦀🐱
 
+<p align="center"><img src="cf6b64e56b487f87282ba55be2fb5d88.jpg" alt="Clawd Mochi — Companion Edition" width="380"></p>
+
 A desk pet built on an **ESP32-C3 + 1.54" ST7789** display that reacts to your
 **Claude Code** session in real time — it shows a "working" face while Claude
 runs tools, a random cute face when it finishes, gets sleepy when idle, and
