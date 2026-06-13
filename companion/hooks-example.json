@@ -1,0 +1,32 @@
+// Add these hooks to your Claude Code settings.json
+//   (~/.claude/settings.json — global, or .claude/settings.json — per project)
+// to make Clawd Mochi react while Claude Code works.
+// Replace /PATH/TO with the real path to clawd_cmd.sh, and make it executable:
+//   chmod +x /PATH/TO/companion/clawd_cmd.sh
+//
+// If you already have hooks, MERGE these entries into the matching event arrays
+// instead of overwriting the file.
+{
+  "hooks": {
+    "SessionStart": [
+      { "matcher": "", "hooks": [
+        { "type": "command", "command": "/PATH/TO/companion/clawd_cmd.sh l", "async": true, "timeout": 5 }
+      ]}
+    ],
+    "PreToolUse": [
+      { "matcher": "", "hooks": [
+        { "type": "command", "command": "/PATH/TO/companion/clawd_cmd.sh c", "async": true, "timeout": 5 }
+      ]}
+    ],
+    "PostToolUseFailure": [
+      { "matcher": "", "hooks": [
+        { "type": "command", "command": "/PATH/TO/companion/clawd_cmd.sh x", "async": true, "timeout": 5 }
+      ]}
+    ],
+    "Stop": [
+      { "matcher": "", "hooks": [
+        { "type": "command", "command": "/PATH/TO/companion/clawd_cmd.sh w", "async": true, "timeout": 5 }
+      ]}
+    ]
+  }
+}
